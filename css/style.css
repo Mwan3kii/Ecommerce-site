@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.header-container {
+    max-width: 960px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+}
+
+.navbar-div {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.nav-ul {
+    display: flex;
+    flex-basis: auto;
+}
+
+.nav-item {
+    list-style: none;
+    padding: 12px;
+}
+.title {
+    color: #2b2d42;
+}
+
+.spanh1 {
+    color: #ef233c;
+}
+
+.nav-btn {
+    padding: 7px 20px;
+    background-color: #ef233c;
+    color: white;
+    border-color: #ef233c;
+}
+
+.user {
+    font-size: 5px;
+}
+
+.banner-section {
+    background-image: url('/images/banner1.jpg');
+    height: 480px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    position: relative;
+}
+
+.banner-container {
+    max-width: 600px;
+    text-align: center;
+}
+
+.banner-h5 {
+    color: #ef233c;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.banner-h3 {
+    font-size: 60px;
+    line-height: 34px;
+    color: #fff;
+}
+
+.banner-p {
+    color: #fff;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 600;
+}
+
+.shoping-btn {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 600;
+    padding: 18px 32px;
+    color: #fff;
+    background-color: #ef233c;
+    border-color: #ef233c;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.free-ship {
+    background-color: #f7f6f6;
+    text-align: center;
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
+.free-ship h2 {
+    font-size: 26px;
+    line-height: 20px;
+    color: #2b2d42;
+}
+
+.offers-section {
+    background-color: #f7f6f6;
+}
+
+.offers-container {
+    margin-right: auto;
+    margin-left: auto;
+}
