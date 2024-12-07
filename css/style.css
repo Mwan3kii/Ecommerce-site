@@ -1,0 +1,375 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    background-color: #fff;
+}
+
+.header-container {
+    display: flex;
+    margin-left: 90px;
+    margin-right: auto;
+    margin-top: 25px;
+    justify-content: space-between;
+}
+
+.navbar-div {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.nav-ul {
+    display: flex;
+    flex-basis: auto;
+}
+
+.nav-item {
+    list-style: none;
+    padding: 12px;
+    font-family: 'Kumbh Sans', sans-serif;
+    color: #2b2d42;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.nav-item:hover {
+    color: #ef233c;
+}
+
+.search-bar {
+    list-style: none;
+    padding: 12px;
+    color: #060500;
+    margin-left: 20px;
+}
+
+.title {
+    color: #ef233c;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.spanh1 {
+    color: #2b2d42;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.auth-div {
+    margin-right: 50px;
+}
+
+.nav-btn {
+    padding: 12px 18px;
+    background-color: #ef233c;
+    color: white;
+    border-color: #ef233c;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 3px;
+    margin-left: 10px;
+}
+
+.nav-btn:hover {
+    background-color: #d90429;
+}
+
+.user {
+    font-size: 10px;
+    margin-right: 5px;
+}
+
+.banner-section {
+    background-image: url('/images/banner4.jpg');
+    box-shadow: inset 10px 10px 90px -10px rgba(2, 2, 2, 2);
+    height: 480px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+}
+
+.banner-container {
+    text-align: center;
+}
+
+.banner-h5 {
+    color: #ef233c;
+    font-size: 21px;
+    line-height: 30px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.banner-h3 {
+    font-size: 55px;
+    line-height: 34px;
+    color: #fff;
+    margin-top: 15px;
+    font-weight: 900;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.banner-p {
+    color: #fff;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 900;
+    margin-top: 15px;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.shoping-btn {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 600;
+    padding: 18px 32px;
+    color: #fff;
+    background-color: #ef233c;
+    border-color: #ef233c;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.shoping-btn:hover {
+    background-color: #d90429;
+}
+
+.free-ship {
+    background-color: #f7f6f6;
+    text-align: center;
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
+.free-ship h2 {
+    font-size: 26px;
+    line-height: 20px;
+    color: #2b2d42;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.shipping-icon {
+    margin-left: 15px;
+}
+
+.shop-display {
+    margin-top: 90px;
+    display: flex;
+    gap: 40px;
+    margin-left: 90px;
+    margin-bottom: 90px;
+}
+
+.shoping-container1 {
+    width: 550px;
+    height: 40vh;
+    border-radius: 3px;
+    border-color: #060500;
+    background-image: url('/images/banner1.jpg');
+    background-size: cover;
+    box-shadow: inset 10px 10px 90px -10px rgba(2, 2, 2, 2);
+}
+
+.shoping-container2 {
+    width: 550px;
+    height: 40vh;
+    border-radius: 3px;
+    border-color: #060500;
+    background-image: url('/images/banner4.jpg');
+    background-size: cover;
+    box-shadow: inset 10px 10px 90px -10px rgba(2, 2, 2, 2);
+}
+
+.shoping-container1 h2 {
+    font-size: 28px;
+    line-height: 20px;
+    color: #fff;
+    font-family: 'Kumbh Sans', sans-serif;
+    padding-top: 70px;
+    margin-left: 51px;
+}
+
+.shoping-container2 h2 {
+    font-size: 28px;
+    line-height: 20px;
+    color: #fff;
+    font-family: 'Kumbh Sans', sans-serif;
+    padding-top: 70px;
+    margin-left: 51px;
+}
+
+.shoping-container1 button {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: #fff;
+    background-color: transparent;
+    border-color: #fff;
+    text-align: center;
+    margin-top: 60px;
+    border-radius: 1px;
+    margin-left: 51px;
+}
+
+.shoping-container1 button:hover {
+    background-color: #ef233c;
+}
+
+.shoping-container2 button {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: #fff;
+    background-color: transparent;
+    border-color: #fff;
+    text-align: center;
+    margin-top: 60px;
+    border-radius: 1px;
+    margin-left: 51px;
+}
+
+.shoping-container2 button:hover {
+    background-color: #ef233c;
+}
+
+.offers-section {
+    background-color: #f7f6f6;
+    height: 150vh;
+}
+
+.offers-container {
+    margin-right: auto;
+    margin-left: 90px;
+}
+
+.deals-div {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    gap: 30px;
+}
+
+.deals-title {
+    font-size: 33px;
+    line-height: 40px;
+    padding-top: 90px;
+    color: #2b2d42;
+    font-weight: 700;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.deals-product img {
+    height: 30vh;
+    width: auto;
+    border-radius: 3px;
+}
+
+.deals-product h4 {
+    font-size: 17px;
+    line-height: 26px;
+    color: #2b2d42;
+    margin-top: 1.5em;
+    width: 80%;
+    font-weight: 600;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.deals-product h4:hover {
+    color: #ef233c;
+}
+
+.footer-section {
+    background-color: #060500;
+}
+
+.footer-div {
+    height: 85vh;
+    margin-left: 90px;
+    color: #fff;
+}
+
+.footer-title {
+    font-size: 40px;
+    color: #fff;
+    font-weight: 700;
+    line-height: 50px;
+    padding-top: 50px;
+    font-family: 'Kumbh Sans', sans-serif;
+    width: 69%;
+}
+
+.footer-info ul {
+    margin-top: 20px;
+}
+
+.footer-info li {
+    list-style: none;
+    font-size: 18px;
+    font-weight: 100;
+    margin-bottom: 10px;
+    color: #888;
+    line-height: 20px;
+}
+
+.footer-info li:hover {
+    color: #fff;
+}
+
+.footer-container {
+    display: flex;
+    gap: 250px;
+    margin-top: 40px;
+}
+
+.footer-container h6 {
+    font-size: 25px;
+    color: #fff;
+    line-height: 28px;
+    font-weight: 600;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.payment-span img {
+    width: 65%;
+    height: 10vh;
+}
+
+.headline {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.footer-div p {
+    font-size: 18px;
+    color: #888;
+    line-height: 28px;
+    margin-top: 20px;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.socials {
+    display: flex;
+    margin-right: 60px;
+    gap: 10px;
+}
+
+.social-btn {
+    padding: 7px 20px;
+    background-color: #ef233c;
+    color: white;
+    border-color: #ef233c;
+}
