@@ -602,14 +602,14 @@
     text-align: center;
 }
 
-.login-form {
+.auth-form {
     border: 3px;
     border-color: #060500;
     width: 50%;
     height: 30vh;
 }
 
-.login-form input {
+.auth-form input {
     width: 100%;
     padding: 15px 45px 15px 15px;
     text-align: left;
@@ -619,21 +619,21 @@
     color: #888;
     border: 1px solid var(--bg-grey);
     border-radius: 4px;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.2em;
 }
 
-.login-form input:active {
+.auth-form input:active {
     border: 1px solid #ef233c;
 }
 
-.login-span {
+.auth-span {
     position: relative;
     margin-bottom: 20px;
     display: inline-block;
     width: 100%;
 }
 
-.login-span span {
+.auth-span span {
     position: absolute;
     right: 15px;
     top: 15px;
@@ -641,9 +641,9 @@
     color: #2b2d42;
 }
 
-.login-form p {
+.auth-form p {
     font-size: 18px;
-    margin-top: 2em;
+    margin-top: 1.5em;
     font-weight: 500;
     line-height: 20px;
     letter-spacing: 1px;
@@ -651,7 +651,7 @@
     text-align: center;
 }
 
-.login-form span {
+.auth-form span {
     font-size: 18px;
     font-weight: 900;
     line-height: 20px;
@@ -659,11 +659,11 @@
     color: #2b2d42;
 }
 
-.login-form span:hover {
+.auth-form span:hover {
     color: #ef233c;
 }
 
-.login-button {
+.auth-button {
     font-size: 15px;
     line-height: 16px;
     font-weight: 600;
@@ -676,6 +676,10 @@
     border-radius: 4px;
 }
 
-.login-button:hover {
+.auth-button:hover {
     background-color: #d90429;
+}
+
+a {
+    text-decoration: none;
 }
