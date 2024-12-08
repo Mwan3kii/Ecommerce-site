@@ -569,3 +569,113 @@
     line-height: 20px;
     color: #232020;
 }
+
+.auth-section {
+    padding-top: 5em;
+    padding-bottom: 3em;
+    height: 80vh;
+}
+
+.main-auth {
+    display: grid;
+    align-items: center;
+    background-color: #fff;
+}
+
+.auth-container {
+    width: 40%;
+    margin: 0 auto;
+}
+
+.auth-container form {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.auth-container h2 {
+    font-size: 28px;
+    margin-bottom: 1.5em;
+    font-weight: 900;
+    line-height: 20px;
+    letter-spacing: 1px;
+    color: #2b2d42;
+    text-align: center;
+}
+
+.login-form {
+    border: 3px;
+    border-color: #060500;
+    width: 50%;
+    height: 30vh;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 15px 45px 15px 15px;
+    text-align: left;
+    background-color: #f7f6f6;
+    font-size: 14px;
+    font-weight: 600;
+    color: #888;
+    border: 1px solid var(--bg-grey);
+    border-radius: 4px;
+    margin-bottom: 0.5em;
+}
+
+.login-form input:active {
+    border: 1px solid #ef233c;
+}
+
+.login-span {
+    position: relative;
+    margin-bottom: 20px;
+    display: inline-block;
+    width: 100%;
+}
+
+.login-span span {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 16px;
+    color: #2b2d42;
+}
+
+.login-form p {
+    font-size: 18px;
+    margin-top: 2em;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 1px;
+    color: #888;
+    text-align: center;
+}
+
+.login-form span {
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 20px;
+    letter-spacing: 1px;
+    color: #2b2d42;
+}
+
+.login-form span:hover {
+    color: #ef233c;
+}
+
+.login-button {
+    font-size: 15px;
+    line-height: 16px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #fff;
+    background-color: #ef233c;
+    border-color: #ef233c;
+    text-align: center;
+    padding: 15px 45px;
+    border-radius: 4px;
+}
+
+.login-button:hover {
+    background-color: #d90429;
+}
