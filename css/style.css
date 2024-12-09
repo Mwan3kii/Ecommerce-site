@@ -683,3 +683,25 @@
 a {
     text-decoration: none;
 }
+
+.cart-section {
+    position: fixed;
+    right: 0;
+}
+
+.cart-container {
+    padding: 1em;
+    background: #fbfbfb;
+    color: #060500;
+    box-shadow: none;
+    border-radius: 1px solid #ddd;
+}
+
+.cart-list {
+    width: 100%;
+    list-style: none;
+    border: none;
+    box-shadow: none;
+    padding: 1em;
+    margin: 5px 0 20px;
+}
