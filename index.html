@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/assests/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="/script.js" defer></script>
 </head>
 
 <body>
@@ -34,7 +35,7 @@
                         <span>Login</span>
                     </button>
                 </a>
-                <button class="nav-btn">
+                <button class="nav-btn" id="cartButton">
                     <span class="fas fa-shopping-bag"></span>
                     <span>Cart</span>
                 </button>
@@ -57,6 +58,45 @@
             </div>
         </div>
     </section>
+    <div id="popupCart">
+        <div class="cart-section">
+            <div class="cart-container">
+                <div style="display: flex; justify-content: space-between;">
+                    <h2>CART</h2>
+                    <button type="button" class="cart-close">×</button>
+                </div>
+                <div class="cart-list">
+                    <ul>
+                        <li>
+                            <h4>Dark Blue Top</h4>
+                            <div>
+                                <input class="cart-quantity" data-sbmincart-idx="0" name="quantity_1" type="text"
+                                    pattern="[0-9]*" value="1" autocomplete="off">
+                                <button type="button" class="remove-cart">×</button>
+                            </div>
+                            <span class="cart-price">$299.99</span>
+                        </li>
+                        <li>
+                            <h4>Dark Blue Top</h4>
+                            <div>
+                                <input class="cart-quantity" data-sbmincart-idx="0" name="quantity_1" type="text"
+                                    pattern="[0-9]*" value="1" autocomplete="off">
+                                <button type="button" class="remove-cart">×</button>
+                            </div>
+                            <span class="cart-price">$299.99</span>
+                        </li>
+                    </ul>
+
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                    <div class="cart-total">Subtotal: $999.98 USD</div>
+                    <a href="checkout.html">
+                        <button class="cart-checkout" type="submit">Check Out</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
     <section class="free-ship">
         <h2>Free Shipping For You Till Midnight
             <i class="fas fa-shipping-fast shipping-icon"></i>
