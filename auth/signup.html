@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecommerce Site</title>
     <link rel="stylesheet" href="/assests/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
@@ -51,7 +51,7 @@
         <div class="main-auth">
             <div class="auth-container">
                 <h2>Register an account</h2>
-                <form class="auth-form">
+                <form action="register.php" method="post" class="auth-form">
                     <div class="auth-span">
                         <input type="text" name="username" placeholder="Username" required>
                         <span class="fas fa-user" aria-hidden="true"></span>
@@ -66,7 +66,7 @@
                     </div>
                     <p>Already have an account?<span>Login here</span></p>
                     <div style="text-align: center; margin-top: 1.5em;">
-                        <button class="auth-button">
+                        <button class="auth-button" type="submit">
                             Sign up
                         </button>
                     </div>
@@ -107,7 +107,7 @@
                         <ul>
                             <li>
                                 <span class="payment-span">
-                                    <img src="/images/pesapal.png" alt="pesapal logo">
+                                    <img src="../images/pesapal.png" alt="pesapal logo">
                                 </span>
                             </li>
                         </ul>
