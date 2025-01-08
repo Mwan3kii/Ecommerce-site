@@ -9,9 +9,15 @@ $sql = "INSERT INTO users (name, email, password) VALUES ('$name', '$email', '$p
 
 if ($conn->query($sql)) {
     echo "Registration successful!";
+    echo "<script>
+          window.location.href = '../index.html';
+          </script>";
 } else {
     echo "Error: " . $conn->error;
     alert("Error");
 }
+
+
+$conn->close();
 
 ?>
