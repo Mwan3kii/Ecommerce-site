@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="/assests/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <!-- <script src="./script.js?q=1" defer></script> -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -44,30 +42,33 @@
         <div>
             <div class="product-banner">
                 <div class="productb">
-                    <h5 class="product-h5">Products</h5>
+                    <h5 class="product-h5">Create a new product here</h5>
                 </div>
             </div>
         </div>
     </section>
-    <section>
-        <div class="products-section">
-            <div class="products-div">
-                <div class="products-display">
-                    <!-- Products will be dynamically manipulated here -->
-                    <!-- <div class="product-image">
-                        <a href="single-product.html">
-                            <img src="images/p2.jpg" alt="product">
-                        </a>
-                        <button class="cart-button">
-                            Add to cart
+    <section class="prod-section">
+        <div class="main-prod">
+            <div class="prod-container">
+                <form action="products.php" method="post" class="prod-form" enctype="multipart/form-data">
+                    <div class="prod-div">
+                        <input type="text" name="product" placeholder="Product name" required>
+                    </div>
+                    <div class="prod-div">
+                        <input type="text" name="description" placeholder="Description" required>
+                    </div>
+                    <div class="prod-div">
+                        <input type="number" name="price" placeholder="Price" required>
+                    </div>
+                    <div class="prod-div">
+                        <input type="file" name="image" accept="image/*;capture=camera" placeholder="Attach image" required>
+                    </div>
+                    <div style="text-align: center; margin-top: 1.5em;">
+                        <button class="prod-button" type="submit" value="submit">
+                            Create
                         </button>
                     </div>
-                    <h4>Checkered Casual shirt</h4>
-                    <span class="price">
-                        <del>Ksh 800</del>
-                        Ksh 900.99
-                    </span>  -->
-                </div>
+                </form>
             </div>
         </div>
     </section>
@@ -132,51 +133,6 @@
                 </div>
             </div>
         </div>
-        <script>
-            // $.get("view.php", function (data, status) {
-            //     products = data;
-            // });
-            setTimeout(function () {
-            // $("#spinner").show();
-            $(document).ready(function () {
-                // alert("Button clicked");
-                $("#spinner").show();
-                $.get("display-products.php", function (data, status) {
-                    alert("Data received" + data + "\nStatus: " + status);
-                    $("#spinner").hide();
-                    // const json_feedback = JSON.parse(data);
-                    // alert(json_feedback.status);
-                    $(".products-display").html(data);
-                    // $("#view-table").html(json_feedback.html_res);
-                });
-            });
-        }, 1000);
-
-            // const productContainer = document.querySelector('.products-div');
-
-            // if (productContainer) {
-            //     products.forEach(product => {
-            //         const productDiv = document.createElement('div');
-            //         productDiv.classList.add('products-display');
-            //         productDiv.innerHTML = `
-            // <div class="product-image">
-            //                 <img src="${product.image}" alt="product" onclick="singleProduct(${product.id})">
-            //                 <button class="cart-button">
-            //                     Add to cart
-            //                 </button>
-            //             </div>
-            //             <h4>${product.name}</h4>
-            //             <span class="price">
-            //                 <del>Ksh ${product.oldPrice}</del>
-            //                 Ksh ${product.newPrice}
-            //             </span>
-            // `;
-            //         productContainer.appendChild(productDiv);
-            //     });
-            // } else {
-            //     console.error('Products container not found!');
-            // }
-        </script>
     </footer>
 </body>
 

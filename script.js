@@ -1,39 +1,54 @@
-const products = [
-    {
-        id: 1, name: 'Checkered Casual shirt', description: "Crafted from premium breathable cotton, this shirt features a timeless checkered pattern in versatile tones, making it a perfect choice for any occasion—whether you're heading to the office or out for a casual evening. The relaxed fit ensures all-day comfort, while the button-down collar and neatly stitched cuffs add a touch of sophistication. Pair it with jeans for a laid-back vibe or chinos for a more polished look.",
-        newPrice: 6000, oldPrice: 5000, image: 'images/p3.jpg'
-    },
-    { id: 2, name: 'Checkered Casual shirt', description: "Crafted from premium breathable cotton, this shirt features a timeless checkered pattern in versatile tones, making it a perfect choice for any occasion—whether you're heading to the office or out for a casual evening. The relaxed fit ensures all-day comfort, while the button-down collar and neatly stitched cuffs add a touch of sophistication. Pair it with jeans for a laid-back vibe or chinos for a more polished look.", newPrice: 6000, oldPrice: 5000, image: 'images/p2.jpg' },
-    { id: 3, name: 'Checkered Casual shirt', description: "Crafted from premium breathable cotton, this shirt features a timeless checkered pattern in versatile tones, making it a perfect choice for any occasion—whether you're heading to the office or out for a casual evening. The relaxed fit ensures all-day comfort, while the button-down collar and neatly stitched cuffs add a touch of sophistication. Pair it with jeans for a laid-back vibe or chinos for a more polished look.", newPrice: 6000, oldPrice: 5000, image: 'images/p3.jpg' },
-    { id: 4, name: 'Checkered Casual shirt', description: "Crafted from premium breathable cotton, this shirt features a timeless checkered pattern in versatile tones, making it a perfect choice for any occasion—whether you're heading to the office or out for a casual evening. The relaxed fit ensures all-day comfort, while the button-down collar and neatly stitched cuffs add a touch of sophistication. Pair it with jeans for a laid-back vibe or chinos for a more polished look.", newPrice: 6000, oldPrice: 5000, image: 'images/product.jpg' },
-    { id: 5, name: 'Checkered Casual shirt', newPrice: 6000, oldPrice: 5000, image: 'images/p3.jpg' },
-    { id: 6, name: 'Checkered Casual shirt', newPrice: 6000, oldPrice: 5000, image: 'images/product.jpg' },
-];
+// const products = [
+//     {
+//         id: 1, name: 'Checkered Casual shirt', description: "Crafted from premium breathable cotton, this shirt features a timeless checkered pattern in versatile tones, making it a perfect choice for any occasion—whether you're heading to the office or out for a casual evening. The relaxed fit ensures all-day comfort, while the button-down collar and neatly stitched cuffs add a touch of sophistication. Pair it with jeans for a laid-back vibe or chinos for a more polished look.",
+//         newPrice: 6000, oldPrice: 5000, image: 'images/p3.jpg'
+//     },
+//     { id: 2, name: 'Checkered Casual shirt', description: "Crafted from premium breathable cotton, this shirt features a timeless checkered pattern in versatile tones, making it a perfect choice for any occasion—whether you're heading to the office or out for a casual evening. The relaxed fit ensures all-day comfort, while the button-down collar and neatly stitched cuffs add a touch of sophistication. Pair it with jeans for a laid-back vibe or chinos for a more polished look.", newPrice: 6000, oldPrice: 5000, image: 'images/p2.jpg' },
+//     { id: 3, name: 'Checkered Casual shirt', description: "Crafted from premium breathable cotton, this shirt features a timeless checkered pattern in versatile tones, making it a perfect choice for any occasion—whether you're heading to the office or out for a casual evening. The relaxed fit ensures all-day comfort, while the button-down collar and neatly stitched cuffs add a touch of sophistication. Pair it with jeans for a laid-back vibe or chinos for a more polished look.", newPrice: 6000, oldPrice: 5000, image: 'images/p3.jpg' },
+//     { id: 4, name: 'Checkered Casual shirt', description: "Crafted from premium breathable cotton, this shirt features a timeless checkered pattern in versatile tones, making it a perfect choice for any occasion—whether you're heading to the office or out for a casual evening. The relaxed fit ensures all-day comfort, while the button-down collar and neatly stitched cuffs add a touch of sophistication. Pair it with jeans for a laid-back vibe or chinos for a more polished look.", newPrice: 6000, oldPrice: 5000, image: 'images/product.jpg' },
+//     { id: 5, name: 'Checkered Casual shirt', newPrice: 6000, oldPrice: 5000, image: 'images/p3.jpg' },
+//     { id: 6, name: 'Checkered Casual shirt', newPrice: 6000, oldPrice: 5000, image: 'images/product.jpg' },
+// ];
 
-const productContainer = document.querySelector('.products-div');
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+       // Typical action to be performed when the document is ready:
+    //    document.getElementById("demo").innerHTML = xhttp.responseText;
+       products = xhttp.responseText;
+    }
+};
+xhttp.open("GET", "view.php", true);
+xhttp.send();
 
-if (productContainer) {
-    products.forEach(product => {
-        const productDiv = document.createElement('div');
-        productDiv.classList.add('products-display');
-        productDiv.innerHTML = `
-            <div class="product-image">
-                            <img src="${product.image}" alt="product" onclick="singleProduct(${product.id})">
-                            <button class="cart-button">
-                                Add to cart
-                            </button>
-                        </div>
-                        <h4>${product.name}</h4>
-                        <span class="price">
-                            <del>Ksh ${product.oldPrice}</del>
-                            Ksh ${product.newPrice}
-                        </span>
-            `;
-        productContainer.appendChild(productDiv);
-    });
-} else {
-    console.error('Products container not found!');
-}
+// $.get("view.php", function (data, status) {
+//     products = data;
+// });
+
+// const productContainer = document.querySelector('.products-div');
+
+// if (productContainer) {
+//     products.forEach(product => {
+//         const productDiv = document.createElement('div');
+//         productDiv.classList.add('products-display');
+//         productDiv.innerHTML = `
+//             <div class="product-image">
+//                             <img src="${product.image}" alt="product" onclick="singleProduct(${product.id})">
+//                             <button class="cart-button">
+//                                 Add to cart
+//                             </button>
+//                         </div>
+//                         <h4>${product.name}</h4>
+//                         <span class="price">
+//                             <del>Ksh ${product.oldPrice}</del>
+//                             Ksh ${product.newPrice}
+//                         </span>
+//             `;
+//         productContainer.appendChild(productDiv);
+//     });
+// } else {
+//     console.error('Products container not found!');
+// }
 
 function singleProduct(productId) {
     localStorage.setItem('selectedProductId', productId);
