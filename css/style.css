@@ -402,16 +402,20 @@
 
 .products-section {
     margin-top: 70px;
-    margin-left: 90px;
     margin-right: auto;
     margin-bottom: 70px;
+    margin-left: 90px;
 }
 
 .products-div {
+    
+}
+
+.products-display {
+    text-align: center;
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
-    text-align: center;
 }
 
 .products-display img {
@@ -426,7 +430,6 @@
     line-height: 26px;
     color: #2b2d42;
     margin-top: 1.5em;
-    width: 80%;
     font-weight: 600;
     font-family: 'Kumbh Sans', sans-serif;
 }
