@@ -10,8 +10,11 @@ if ($result->num_rows > 0) {
     // Checks if result contains rows
     while($row = $result->fetch_assoc()) {
     $text.= "
+    <div>
             <div class='product-image'>
-                <img src='uploads/" . $row['IMAGE'] . "' alt='product' onclick='singleProduct(" . $row['ID'] . ")'>
+                <a href='single-product.php?id=" . $row['ID'] . "'>
+                <img src='uploads/" . $row['IMAGE'] . "' alt='product'>
+                </a>
                 <button class='cart-button'>
                     Add to cart
                 </button>
@@ -21,13 +24,14 @@ if ($result->num_rows > 0) {
                 <del>Ksh " . $row['PRICE'] . "</del>
                 Ksh " . $row['PRICE'] . "
             </span>
+            </div>
         ";
 }
 } else {
-    echo "0 results";
+    echo "No products";
 }
 
-$prod->resp = $text;
+// $prod->resp = $text;
 echo $text;
 
 $conn->close();

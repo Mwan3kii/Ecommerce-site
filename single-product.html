@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/assests/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <script src="./script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -50,7 +50,7 @@
     </section>
     <section>
         <div class="single-container">
-            <div class="single-image">
+            <!-- <div class="single-image">
                 <img src="" alt="single product">
                 <button class="single-btn">
                     Add to cart
@@ -71,7 +71,7 @@
                     <p></p>
                 </div>
                 <h4>Check delivery, payment options and charges at your location</h4>
-            </div>
+            </div> -->
         </div>
     </section>
     <footer class="footer-section">
@@ -135,7 +135,25 @@
                 </div>
             </div>
         </div>
+        <script>
+            setTimeout(function () {
+                $(document).ready(function () {
+                    alert("Button clicked");
+                    $("#spinner").show(); 
+                    $.get("single-product.php", function (data, status) {
+                        alert("Data received" + data + "\nStatus: " + status);
+                        $("#spinner").hide();
+                        // const json_feedback = JSON.parse(data);
+                        // alert(json_feedback.status);
+                        $(".single-container").html(data);    
+                        // $("#view-table").html(json_feedback.html_res);
+                    });
+                });
+            }, 1000);
+    
+        </script>
     </footer>
+    
 </body>
 
 </html>

@@ -32,7 +32,7 @@ if ($conn->query($sql)) {
     echo "products saved";
     echo "<script>
             setTimeout(function() {
-                window.location.href = 'index.html';
+                window.location.href = 'products.html';
             }, 1000);
           </script>";
 } else {
