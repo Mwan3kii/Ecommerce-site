@@ -12,7 +12,9 @@ if ($result->num_rows > 0) {
     $text.= "
     <div>
             <div class='product-image'>
-                <img src='uploads/" . $row['IMAGE'] . "' alt='product' onclick='singleProduct(" . $row['ID'] . ")'>
+                <a href='single-product.php?id=" . $row['ID'] . "'>
+                <img src='uploads/" . $row['IMAGE'] . "' alt='product'>
+                </a>
                 <button class='cart-button'>
                     Add to cart
                 </button>
