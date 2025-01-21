@@ -10,16 +10,16 @@
 //     { id: 6, name: 'Checkered Casual shirt', newPrice: 6000, oldPrice: 5000, image: 'images/product.jpg' },
 // ];
 
-var xhttp = new XMLHttpRequest();
-xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-       // Typical action to be performed when the document is ready:
-    //    document.getElementById("demo").innerHTML = xhttp.responseText;
-       products = xhttp.responseText;
-    }
-};
-xhttp.open("GET", "view.php", true);
-xhttp.send();
+// var xhttp = new XMLHttpRequest();
+// xhttp.onreadystatechange = function() {
+//     if (this.readyState == 4 && this.status == 200) {
+//        // Typical action to be performed when the document is ready:
+//     //    document.getElementById("demo").innerHTML = xhttp.responseText;
+//        products = xhttp.responseText;
+//     }
+// };
+// xhttp.open("GET", "view.php", true);
+// xhttp.send();
 
 // $.get("view.php", function (data, status) {
 //     products = data;
@@ -101,3 +101,6 @@ cartButton.addEventListener('click', () => {
 closeCart.addEventListener('click', () => {
   popupCart.style.display = 'none'; // Hide the cart
 });
+
+const errorMessage = document.getElementById('errorPopup');
+
