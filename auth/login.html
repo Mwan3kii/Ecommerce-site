@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/assests/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -51,10 +52,10 @@
         <div class="main-auth">
             <div class="auth-container">
                 <h2>Login to your account</h2>
-                <form class="auth-form" action="login.php" method="post"> 
+                <form class="auth-form" action="login.php" method="post">
                     <div class="auth-span">
-                        <input type="text" name="username" placeholder="Username" required>
-                        <span class="fas fa-user" aria-hidden="true"></span>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <span class="fas fa-envelope" aria-hidden="true"></span>
                     </div>
                     <div class="auth-span">
                         <input type="password" name="password" placeholder="Password" required>
@@ -70,6 +71,16 @@
             </div>
         </div>
     </section>
+    <div class="message-popup">
+        <div class="message-container">
+            <div class="error-heading">
+                <span class="close-btn" onclick="closePopup()">&times;</span>
+            </div>
+            <div class="message-content">
+                <p id="errorMessage">Invalid username or password!</p>
+            </div>
+        </div>
+    </div>
     <footer class="footer-section">
         <div class="footer-div">
             <h2 class="footer-title">Special Offer every week with a 50 % discount</h2>
@@ -132,6 +143,13 @@
             </div>
         </div>
     </footer>
+    <script>
+        $(document).ready(function () {
+            $.get("login.php", function (data, status) {
+                $(".errorMessage").html(data);
+            });
+        });
+    </script>
 </body>
 
 </html>
