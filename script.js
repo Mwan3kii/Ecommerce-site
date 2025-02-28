@@ -103,4 +103,3 @@ closeCart.addEventListener('click', () => {
 });
 
 const errorMessage = document.getElementById('errorPopup');
-
