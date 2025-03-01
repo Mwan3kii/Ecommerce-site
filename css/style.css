@@ -77,7 +77,23 @@
     margin-left: 10px;
 }
 
+.logout-btn {
+    padding: 12px 18px;
+    background-color: #ef233c;
+    color: white;
+    border-color: #ef233c;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 3px;
+    margin-left: 10px;
+}
+
 .nav-btn:hover {
+    background-color: #d90429;
+}
+
+.logout-btn:hover {
     background-color: #d90429;
 }
 

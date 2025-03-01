@@ -28,23 +28,33 @@
                     </li>
                 </ul>
             </div>
-            <div class="auth-div">
-                <a href="./auth/login.html">
+            <?php
+            echo $_COOKIE["login"];
+if(!isset($_COOKIE["login"])) {
+    echo '<a href="./auth/login.html">
                     <button class="nav-btn">
                         <div class="fas fa-user user"></div>
                         <span>Login</span>
                     </button>
-                </a>
+                </a>';
+  echo "Logged out";
+} else {
+    echo '<a href="./auth/logout.php">
+                    <button class="logout-btn">
+                        <div class="fas fa-sign out"></div>
+                        <span>Logout</span>
+                    </button>
+                </a>';
+  echo "Logged in";
+}
+?>
+            <div class="auth-div">
+                
                 <button class="nav-btn" id="cartButton">
                     <span class="fas fa-shopping-bag"></span>
                     <span>Cart</span>
                 </button>
-                <a href="">
-                    <button class="nav-btn">
-                        <div class="fas fa-sign out"></div>
-                        <span>Logout</span>
-                    </button>
-                </a>
+                
             </div>
         </div>
     </header>
