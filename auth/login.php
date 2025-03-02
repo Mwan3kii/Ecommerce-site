@@ -11,7 +11,9 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     if($row = $result->fetch_assoc()) {
         // setcookie("login_session", "1", time() + (86400 * 30), "/");
-        setcookie("login", "1", time() + (86400 * 30), "/");
+        // setcookie("login", "1", time() + (86400 * 30), "/");
+        $_SESSION["login"] = "1";
+        $_SESSION["admin"] = (bool) $row["admin"];
         header("Location: ../");
     }
 } else {
