@@ -22,22 +22,27 @@
                     <a href="products.html">
                         <li class="nav-item">PRODUCTS</li>
                     </a>
-                    <a href="./create-product.html"><li class="nav-item">ADD PRODUCT</li></a>
+                    <?php
+                    session_start();
+                    if(isset($_SESSION["admin"]) && $_SESSION["admin"] == 1) {
+                        echo '<a href="./create-product.html"><li class="nav-item">ADD PRODUCT</li></a>';
+                    }
+                    ?>
                     <li class="search-bar">
                         <span class="fas fa-search me-2" aria-hidden="true"></span>
                     </li>
                 </ul>
             </div>
             <?php
-            echo $_COOKIE["login"];
-if(!isset($_COOKIE["login"])) {
+            // echo $_COOKIE["login"];
+if(!isset($_SESSION["login"])) {
     echo '<a href="./auth/login.html">
                     <button class="nav-btn">
                         <div class="fas fa-user user"></div>
                         <span>Login</span>
                     </button>
                 </a>';
-  echo "Logged out";
+//   echo "Logged out";
 } else {
     echo '<a href="./auth/logout.php">
                     <button class="logout-btn">
@@ -45,7 +50,7 @@ if(!isset($_COOKIE["login"])) {
                         <span>Logout</span>
                     </button>
                 </a>';
-  echo "Logged in";
+//   echo "Logged in";
 }
 ?>
             <div class="auth-div">
