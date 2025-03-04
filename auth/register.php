@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once("../database.php");
 
 $name = $_POST["username"];
@@ -9,6 +10,8 @@ $password = $_POST["password"];
 $sql = "INSERT INTO users (name, email, password) VALUES ('$name', '$email', '$password')";
 
 if ($conn->query($sql)) {
+    $_SESSION["user"] = $name;
+    $_SESSION["login"] = "1";
     echo "Registration successful!";
     echo "<script>
           window.location.href = '../';

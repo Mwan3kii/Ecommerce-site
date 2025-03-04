@@ -19,7 +19,7 @@
                 <ul class="nav-ul">
                     <li class="nav-item">HOME</li>
                     <li class="nav-item">ABOUT</li>
-                    <a href="products.html">
+                    <a href="products.php">
                         <li class="nav-item">PRODUCTS</li>
                     </a>
                     <?php
@@ -33,7 +33,15 @@
                     </li>
                 </ul>
             </div>
-            <?php
+            
+            <div class="auth-div">
+            <?php if (isset($_SESSION["user"])): ?>
+                <div class="profile">
+                    <span class="fas fa-user" aria-hidden="true"></span> 
+                    <!-- <img src="images/p1.jpg" alt="Profile Picture" class="profile-image">    -->
+                    <p>Welcome, <?php echo htmlspecialchars($_SESSION["user"]); ?>!</p>
+                </div>
+            <?php endif;
             // echo $_COOKIE["login"];
 if(!isset($_SESSION["login"])) {
     echo '<a href="./auth/login.html">
@@ -53,13 +61,10 @@ if(!isset($_SESSION["login"])) {
 //   echo "Logged in";
 }
 ?>
-            <div class="auth-div">
-                
-                <button class="nav-btn" id="cartButton">
-                    <span class="fas fa-shopping-bag"></span>
-                    <span>Cart</span>
+                <button class="cart-btn" id="cartButton">
+                        <div class="fas fa-shopping-bag"></div>
+                        <span>Cart</span>
                 </button>
-                
             </div>
         </div>
     </header>
