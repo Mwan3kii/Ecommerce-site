@@ -14,6 +14,7 @@ if ($result->num_rows > 0) {
         // setcookie("login", "1", time() + (86400 * 30), "/");
         $_SESSION["login"] = "1";
         $_SESSION["admin"] = (bool) $row["admin"];
+        $_SESSION["user"] = $row["NAME"];
         header("Location: ../");
     }
 } else {
