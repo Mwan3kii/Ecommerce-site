@@ -62,8 +62,7 @@
                     </div>
                 </div>
                 <div class="cart-list">
-                <?php 
-                session_start();
+                <?php session_start();
                 if (isset($_SESSION["cart"])): ?>
                     <ul>
                     <?php foreach ($_SESSION['cart'] as $index => $item): ?>
@@ -80,7 +79,10 @@
                         </li>
                     <?php endforeach; ?>
                     </ul>
+                    <?php else: ?>
+                        <p>No products added to cart</p>
                 <?php endif; ?>
+                
                 </div>
                 <div style="display: flex; justify-content: space-between;">
                     <div class="cart-total">Subtotal: $999.98 USD</div>
@@ -96,19 +98,7 @@
             <div class="products-div">
                 <div class="products-display">
                     <!-- Products will be dynamically manipulated here -->
-                    <!-- <div class="product-image">
-                        <a href="single-product.html">
-                            <img src="images/p2.jpg" alt="product">
-                        </a>
-                        <button class="cart-button">
-                            Add to cart
-                        </button>
-                    </div>
-                    <h4>Checkered Casual shirt</h4>
-                    <span class="price">
-                        <del>Ksh 800</del>
-                        Ksh 900.99
-                    </span>  -->
+                    
                 </div>
             </div>
         </div>
@@ -193,31 +183,20 @@
                 });
             });
         }, 500);
+        </script>
 
-            // const productContainer = document.querySelector('.products-div');
+        <script>
+            $(document).ready(function() {
+                $(".products-display").on("click", ".cart-button", function() {
+                let productId = $(this).data("id");
 
-            // if (productContainer) {
-            //     products.forEach(product => {
-            //         const productDiv = document.createElement('div');
-            //         productDiv.classList.add('products-display');
-            //         productDiv.innerHTML = `
-            // <div class="product-image">
-            //                 <img src="${product.image}" alt="product" onclick="singleProduct(${product.id})">
-            //                 <button class="cart-button">
-            //                     Add to cart
-            //                 </button>
-            //             </div>
-            //             <h4>${product.name}</h4>
-            //             <span class="price">
-            //                 <del>Ksh ${product.oldPrice}</del>
-            //                 Ksh ${product.newPrice}
-            //             </span>
-            // `;
-            //         productContainer.appendChild(productDiv);
-            //     });
-            // } else {
-            //     console.error('Products container not found!');
-            // }
+                $.get("add-cart.php?id=" + productId, function(data) {
+                    $("#popupCart .cart-list").load(" #popupCart .cart-list > *");
+                    // $("#popupCart .cart-list").html(JSON.parse(data));
+                    $("#popupCart").show(); // Show the cart
+                    });
+            });
+        });
         </script>
     </footer>
 </body>

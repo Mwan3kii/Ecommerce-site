@@ -99,28 +99,7 @@ $conn->close();
     <section>
         <div class="single-container">
         <?php echo $item; ?>
-            <!-- <div class="single-image">
-                <img src="" alt="single product">
-                <button class="single-btn">
-                    Add to cart
-                </button>
-            </div>
-            <div class="product-description">
-                <h2></h2>
-                <div style="display: flex; gap: 20px;">
-                    <del>Ksh</del>
-                    <h3>Ksh</h3>
-                </div>
-                <div style="margin-top: 15px;">
-                    <span>Special Price</span>
-                    Get extra 5% off (price inclusive of discount)
-                </div>
-                <div>
-                    <h5>Description:</h5>
-                    <p></p>
-                </div>
-                <h4>Check delivery, payment options and charges at your location</h4>
-            </div> -->
+
         </div>
     </section>
     <footer class="footer-section">
@@ -184,23 +163,6 @@ $conn->close();
                 </div>
             </div>
         </div>
-        <!-- <script>
-            setTimeout(function () {
-                $(document).ready(function () {
-                    alert("Button clicked");
-                    $("#spinner").show(); 
-                    $.get("single-product.php", function (data, status) {
-                        alert("Data received" + data + "\nStatus: " + status);
-                        $("#spinner").hide();
-                        // const json_feedback = JSON.parse(data);
-                        // alert(json_feedback.status);
-                        $(".single-container").html(data);    
-                        // $("#view-table").html(json_feedback.html_res);
-                    });
-                });
-            }, 1000);
-    
-        </script> -->
     </footer>
     
 </body>
