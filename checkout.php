@@ -66,24 +66,26 @@
                         </tr>
                     </thead>
                     <tbody class="checkout-row">
-                        <tr>
-                            <td>1</td>
-                            <td><img src="images/p1.jpg" class="checkout-img"></td>
-                            <td>Checkered Casual shirt</td>
-                            <td><input class="cart-quantity" data-sbmincart-idx="0" name="quantity_1" type="text"
-                                    pattern="[0-9]*" value="1" autocomplete="off"></td>
-                            <td>Ksh 89999</td>
-                            <td><button type="button" class="remove-cart">×</button></td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td><img src="images/p2.jpg" class="checkout-img"></td>
-                            <td>Checkered Casual shirt</td>
-                            <td><input class="cart-quantity" data-sbmincart-idx="0" name="quantity_1" type="text"
-                                    pattern="[0-9]*" value="1" autocomplete="off"></td>
-                            <td>Ksh 89999</td>
-                            <td><button type="button" class="remove-cart">×</button></td>
-                        </tr>
+                        <?php session_start();
+                        if (isset($_SESSION["cart"])): ?>
+                            <?php foreach ($_SESSION['cart'] as $index => $item): ?>
+                            <tr>
+                                
+                                <td><?php echo htmlspecialchars($item["id"]); ?></td>
+                                <!-- <td><img src="/EcommerceSite/Ecommerce-site/<?php echo htmlspecialchars($item["image"]); ?>" class="checkout-img"></td> -->
+                                <td><img src="images/p1.jpg" class="checkout-img"></td>
+                                <td><?php echo htmlspecialchars($item["name"]); ?></td>
+                                <td><input class="cart-quantity" data-sbmincart-idx="0" name="quantity_1" type="text"
+                                        pattern="[0-9]*" value="1" autocomplete="off"></td>
+                                <td><?php echo htmlspecialchars($item["price"]); ?></td>
+                                <td><button type="button" class="remove-cart">×</button></td>
+                            </tr>
+                            <?php endforeach; ?>
+                        <?php else: ?>
+                            <tr>
+                                <td colspan="6">No products added to cart</td>
+                            </tr>
+                        <?php endif; ?>
                     </tbody>
                 </table>
             </div>

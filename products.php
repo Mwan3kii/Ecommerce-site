@@ -86,7 +86,7 @@
                 </div>
                 <div style="display: flex; justify-content: space-between;">
                     <div class="cart-total">Subtotal: $999.98 USD</div>
-                    <a href="checkout.html">
+                    <a href="checkout.php">
                         <button class="cart-checkout" type="submit">Check Out</button>
                     </a>
                 </div>

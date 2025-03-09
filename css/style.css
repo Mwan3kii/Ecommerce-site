@@ -859,6 +859,11 @@ a {
     width: 55%;
 }
 
+.checkout-row {
+    height: 30px;
+    overflow: scroll;
+}
+
 .checkout-row td {
     font-weight: 600;
     font-size: 17px;

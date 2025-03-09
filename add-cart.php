@@ -19,7 +19,8 @@ if ($product_id > 0) {
                 $_SESSION['cart'][] = [
                     'id' => $row["ID"],
                     'name' => $row['NAME'],
-                    'price' => $row['PRICE']
+                    'price' => $row['PRICE'],
+                    'image' => $row['IMAGE']
                 ];
             }
         }
